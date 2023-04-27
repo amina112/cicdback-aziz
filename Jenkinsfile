@@ -106,10 +106,11 @@ stage('Build Docker Image') {
      //  always {
      
 //       cleanWs()
-      // }
+      //}
  //   }
 
     
 	
+}
 }
        
