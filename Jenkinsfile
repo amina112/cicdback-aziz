@@ -8,9 +8,9 @@ pipeline{
 
         stage('Getting project from Git') {
             steps{
-      			checkout([$class: 'GitSCM', branches: [[name: '*/aziz']],
+      			checkout([$class: 'GitSCM', branches: [[name: '*/main']],
 			extensions: [],
-			userRemoteConfigs: [[url: 'https://github.com/med-aziz-ben-haha/cicdback.git']]])
+			userRemoteConfigs: [[url: 'https://github.com/amina112/cicdback-aziz.git']]])
             }
         }
 
@@ -101,25 +101,13 @@ stage('Build Docker Image') {
 }
 
 	    
-        post {
-		success{
-		mail bcc: '', body: '''Dear Med Aziz, 
-we are happy to inform you that your pipeline build was successful. 
-Great work ! 
--Jenkins Team-''', cc: '', from: 'mohamedaziz.benhaha@esprit.tn', replyTo: '', subject: 'Build Finished - Success', to: 'mohamedaziz.benhaha@esprit.tn'
-		}
-		
-		failure{
-mail bcc: '', body: '''Dear Med Aziz, 
-we are sorry to inform you that your pipeline build failed. 
-Keep working ! 
--Jenkins Team-''', cc: '', from: 'mohamedaziz.benhaha@esprit.tn', replyTo: '', subject: 'Build Finished - Failure', to: 'mohamedaziz.benhaha@esprit.tn'
-		}
+ post {
 
-       always {
-		emailext attachLog: true, body: '', subject: 'Build finished',from: 'mohamedaziz.benhaha@esprit.tn' , to: 'mohamedaziz.benhaha@esprit.tn'
-            cleanWs()
-       }
+
+     //  always {
+     
+//       cleanWs()
+      // }
     }
 
     
