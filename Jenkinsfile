@@ -61,21 +61,21 @@ pipeline{
 stage('Build Docker Image') {
                       steps {
                           script {
-                            sh 'docker build -t azizbenhaha/spring-app:latest .'
+                            sh 'docker build -t amina112/spring-app:latest .'
                           }
                       }
                   }
 
                   stage('login dockerhub') {
                                         steps {
-                                     // sh 'echo dckr_pat_-SnwrdC_ELsL6it2JT6cgIcAlrs | docker login -u azizbenhaha --password-stdin'
-				sh 'docker login -u azizbenhaha --password dckr_pat_-SnwrdC_ELsL6it2JT6cgIcAlrs'
+                                     // sh 'echo dckr_pat_-SnwrdC_ELsL6it2JT6cgIcAlrs |docker login -u amina112 --password-stdin'
+				sh 'docker login -u azizbenhaha --password dckr_pat_XhRLl3NFeq1alvvyyQmbnbbB--o'
                                             }
 		  }
 	    
 	                      stage('Push Docker Image') {
                                         steps {
-                                   sh 'docker push azizbenhaha/spring-app:latest'
+                                   sh 'docker push amina112/spring-app:latest'
                                             }
 		  }
 
