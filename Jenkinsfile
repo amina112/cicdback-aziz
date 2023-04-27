@@ -85,20 +85,20 @@ stage('Build Docker Image') {
                                                      // }
           		 // }
 
-		  // stage('Run Spring && MySQL Containers') {
-                               // steps {
-                                    //script {
-                                      //sh 'docker-compose up -d'
-                                   // }
-                               // }
-                          //  }
+		stage('Run Spring && MySQL Containers') {
+                               steps {
+                                    script {
+                                      sh 'docker-compose up -d'
+                                    }
+                                }
+                            }
 
 	    
 
 
 
      
-//}
+}
 
 	    
 // post {
