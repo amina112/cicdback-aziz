@@ -69,7 +69,7 @@ stage('Build Docker Image') {
                   stage('login dockerhub') {
                                         steps {
                                      // sh 'echo dckr_pat_-SnwrdC_ELsL6it2JT6cgIcAlrs |docker login -u amina112 --password-stdin'
-				sh 'docker login -u azizbenhaha --password dckr_pat_XhRLl3NFeq1alvvyyQmbnbbB--o'
+				sh 'docker login -u amina112 --password dckr_pat_XhRLl3NFeq1alvvyyQmbnbbB--o'
                                             }
 		  }
 	    
