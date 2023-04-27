@@ -79,26 +79,26 @@ stage('Build Docker Image') {
                                             }
 		  }
 
-		  /* stage('stop local mysql') {
-                                                  steps {
-                                             sh 'docker stop 188'
-                                                      }
-          		  }
+		//  stage('stop local mysql') {
+                                               //   steps {
+                                            // sh 'docker stop 188'
+                                                     // }
+          		 // }
 
-		   stage('Run Spring && MySQL Containers') {
-                                steps {
-                                    script {
-                                      sh 'docker-compose up -d'
-                                    }
-                                }
-                            }
+		  // stage('Run Spring && MySQL Containers') {
+                               // steps {
+                                    //script {
+                                      //sh 'docker-compose up -d'
+                                   // }
+                               // }
+                          //  }
 
 	    
 
 
 
      
-}*/
+//}
 
 	    
 // post {
