@@ -101,14 +101,13 @@ stage('Build Docker Image') {
 }
 
 	    
- post {
-echo 'finished'
+// post {
 
      //  always {
      
 //       cleanWs()
       // }
-    }
+ //   }
 
     
 	
